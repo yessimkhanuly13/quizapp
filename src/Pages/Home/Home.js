@@ -24,6 +24,8 @@ const Home = ({name, setName, fetchQuestions}) => {
             navigate('/quiz')
         }
     }
+
+
   return (
     <div className='content'>
         <div className='settings'>
@@ -45,9 +47,9 @@ const Home = ({name, setName, fetchQuestions}) => {
                     onChange={(e)=>setCategory(e.target.value)}
                     >
                         {
-                            Categories.map((cat)=>(
-                                <MenuItem key={cat.category} value={cat.value}>
-                                    {cat.category}
+                            Categories.map((catg)=>(
+                                <MenuItem key={catg.category} value={catg.value}>
+                                    {catg.category}
                                 </MenuItem>
                             ))
                         }
