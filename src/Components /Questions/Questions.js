@@ -11,9 +11,11 @@ const Questions = ({questions, setQuestions, currentQuestion, setCurrentQuestion
     const handleSelect = (i) => {
         if(selected === i && selected === correct){
             return "select"
-        }else if(selected === i && selected !== correct){
+        }
+        else if(selected === i && selected !== correct){
             return "wrong"
-        }else if (i === correct){
+        }
+        else if (i === correct){
             return "select"
         }
     }
@@ -57,7 +59,7 @@ return (
                 {options && 
                     options.map((i)=>(
                     <button 
-                        onClick={(i)=>{handleCheck(i)}}
+                        onClick={()=>{handleCheck(i)}}
                         className={`singleOption ${selected && handleSelect(i)}`}
                         key={i}
                         disabled={selected}
